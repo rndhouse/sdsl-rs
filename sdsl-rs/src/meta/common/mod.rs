@@ -42,7 +42,7 @@ pub trait Parameters {
     fn parameters_default_meta(&self) -> &Vec<Box<dyn Meta>>;
 }
 
-static PATH_PREFIX_REGEX: &str = r"([ &]|(&mut ))";
+static PATH_PREFIX_REGEX: &str = r":([ &]|(&mut ))";
 
 pub trait Regex: Path + Parameters {
     fn parameters_regex(&self) -> Result<Option<Vec<regex::Regex>>>;
